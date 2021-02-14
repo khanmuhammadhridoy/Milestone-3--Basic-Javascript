@@ -4,12 +4,15 @@
 function kilometerToMeter(kilometer) {
     if (kilometer >= 0) {
         // converting kilometer to meter
-        const meter = kilometer * 1000;
+        var meter = kilometer * 1000;
         return meter;
-    } 
-    else {
-        console.log("Please give a positive value.");
+    } else {
+
+        return "Please give a positive value.";
+
+        // console.log("Please give a positive value.");
     }
+    return meter;
 }
 
 // budgetCalculator function
@@ -24,8 +27,7 @@ function budgetCalculator(watch, phone, laptop) {
         // calculating total price of watch, phone, and laptop
         let totalPrice = watchPrice + phonePrice + laptopPrice;
         return totalPrice;
-    } 
-    else {
+    } else {
         console.log("Please provide positive number for all product.");
     }
 
@@ -55,8 +57,7 @@ function hotelCost(days) {
             cost = firstPart + secondPart + thirdPart;
         }
         return cost;
-    } 
-    else {
+    } else {
         console.log("Please give a positive value.");
     }
 
@@ -74,3 +75,40 @@ function megaFriend(name) {
     }
     return largeName;
 }
+
+document.getElementById("output").innerHTML =
+    `<h3>kilometerToMeter = <span class = blue>${(kilometerToMeter(10))}</span></h3>
+    <h3>kilometerToMeter with negative value = <span class = blue>${(kilometerToMeter(-10))}</span></h3>
+    <h3>budgetCalculator = <span class = blue>${(budgetCalculator(1, 1, 1))}</span></h3>
+    <h3>budgetCalculator with negative value = <span class = blue>${(budgetCalculator(1, -1, 1))}</span></h3>
+    <h3>hotelCost 10 days = <span class = blue>${(hotelCost(10))}</span></h3>
+    <h3>hotelCost 20 days = <span class = blue>${(hotelCost(20))}</span></h3>
+    <h3>hotelCost more than 20 days (30 days) = <span class = blue>${(hotelCost(30))}</span></h3>
+    <h3>hotelCost with negative value = <span class = blue>${(hotelCost(-10))}</span></h3>
+    <h3>megaFriend = <span class = blue>${megaFriend(['ljhfhh', 'hakjfhkjhafjh', 'jhhafhlh'])}</span></h3>
+    <h3 class = red>For More Info Use Console log</h3>
+    <div>
+        <h4 class = teal>Console log Call function </h4 class = Baby blue'>
+        <ul class="crimson">
+            <li>console.log <span class = darkviolet>(kilometerToMeter(10))</span></li>
+            <li>console.log <span class = darkviolet>(kilometerToMeter(-10))</span></li>
+            <li>console.log <span class = darkviolet>(budgetCalculator(1, 1, 1))</span></li>
+            <li>console.log <span class = darkviolet>(budgetCalculator(1, -1, 1))</span></li>
+            <li>console.log <span class = darkviolet>(hotelCost(10))</span></li>
+            <li>console.log <span class = darkviolet>(hotelCost(20))</span></li>
+            <li>console.log <span class = darkviolet>(hotelCost(30))</span></li>
+            <li>console.log <span class = darkviolet>(hotelCost(-10))</span></li>
+            <li>console.log <span class = darkviolet>(megaFriend(['ljhfhh', 'hakjfhkjhafjh', 'jhhafhlh']))</span></li>
+        </ul>
+    </div>
+    `
+    
+console.log(kilometerToMeter(10));
+console.log(kilometerToMeter(-10));
+console.log(budgetCalculator(1, 1, 1));
+console.log(budgetCalculator(1, -1, 1));
+console.log(hotelCost(10));
+console.log(hotelCost(20));
+console.log(hotelCost(30));
+console.log(hotelCost(-10));
+console.log(megaFriend(['ljhfhh', 'hakjfhkjhafjh', 'jhhafhlh']))
